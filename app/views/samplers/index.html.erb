@@ -1,0 +1,13 @@
+<div id="chasm">
+<% @samplers.each do |sampler| %>
+<div id="cat">
+<div id="cattitle">
+   <img src="<%= sampler.pic %>" width = '200' height = '200'>
+</div>
+<div id="title">
+<%= link_to(sampler.name, sampler) %>
+</div>
+
+</div>
+<% end %>
+</div>

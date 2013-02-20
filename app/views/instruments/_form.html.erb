@@ -1,0 +1,15 @@
+<%= form_for @instrument do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :pic %>
+  <%= f.text_field :pic %>
+  <br>
+  <%= f.label :sound %>
+  <%= f.text_field :sound %>
+  <br>
+  <%= f.label :kit_id %>
+<%= f.select :kit_id, Kit.all.map{|kit| [kit.name, kit.id]} %>
+<br>
+  <%= f.submit %>
+<% end %>

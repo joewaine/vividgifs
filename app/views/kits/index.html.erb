@@ -1,0 +1,16 @@
+<% @kits.each do |kit| %>
+<div id="gif">
+      <img src="<%= kit.pic %>" width = '200' height = '200'>
+
+    <div id="bottominfo">
+    <div id="title">
+           <%= link_to(kit.name, kit) %>
+         </div>
+         <div id="deledit">
+<%= link_to 'Delete', kit, :method => :delete, :confirm => 'Okay to delete?' %>
+<%= link_to 'Edit', edit_kit_path(kit) %>
+</div>
+</div>
+   </div>
+<% end %>
+

@@ -1,0 +1,14 @@
+<div id="cat">
+
+
+   <img src="<%= @sampler.pic %>" width = '200' height = '200'>
+</div>
+<% @sampler.kits.each do |kit| %>
+<div id="gif">
+    <img src="<%= kit.pic %>" width = '200' height = '200'>
+
+<%= link_to(kit.name, kit) %>
+<%= link_to 'delete', @sample, :method => :delete, :confirm => 'Okay to delete?' %>
+
+</div>
+<% end %>

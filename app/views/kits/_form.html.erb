@@ -1,0 +1,38 @@
+<%= form_for @kit do |f| %>
+<table>
+<tr><td>
+  <%= f.label :name, "title" %>
+</td><td>
+  <%= f.text_field :name %><br>
+  </td>
+  </tr>
+  <tr><br>
+  </tr>
+  <tr>
+    <td>
+    <%= f.label :pic, "url" %>
+</td>
+<td>
+  <%= f.text_field :pic %>
+  </td>
+  </tr>
+  <tr><br>
+  </tr>
+  <tr>
+    <td>
+  <%= f.label :sampler_id, "category" %></td>
+  <td>
+<%= f.select :sampler_id, Sampler.all.map{|sampler| [sampler.name, sampler.id]} %>
+  </td>
+  </tr>
+  <tr><br>
+  </tr>
+<tr>
+<td>
+</td>
+<td>
+  <%= f.submit "Add" %>
+</td>
+</tr>
+</table>
+<% end %>

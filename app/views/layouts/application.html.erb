@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GifUnion</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<img src="http://i.imgur.com/XsBDefn.png">
+<nav>
+<%= link_to('all gifs', kits_path) %> /
+<%= link_to('categories', samplers_path) %> /
+<%= link_to('new gif', new_kit_path) %>
+</nav>
+<body>
+<%= yield %>
+</body>
+</html>
